@@ -1,0 +1,92 @@
+jjwal@Ubuntu-Linux12 MINGW64 ~/Desktop (master)
+$ cd Gitfolder/
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder (master)
+$ ls
+Gitfolder/
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder (master)
+$ cd Gitfolder/
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git branch assignbranch
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git branch
+  assignbranch
+* master
+  testbranch
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git checkout assignbranch
+Switched to branch 'assignbranch'
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ touch bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ git add bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ git commit -m "Added file"
+[assignbranch d700828] Added file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ git branch
+* assignbranch
+  master
+  testbranch
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (assignbranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git merge assignbranch
+Updating e710503..d700828
+Fast-forward
+ bfile.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ ls
+assignment.txt  file1                        Ujjwal_Kumar_Linux_Day02.txt
+bfile.txt       newfile.txt
+comit           Ujjwal_Kumar_day03Part1.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ vi bfile.txt
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ cat bfile.txt
+Added line from master branch.
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git add bfile.txt
+warning: LF will be replaced by CRLF in bfile.txt.
+The file will have its original line endings in your working directory
+
+ujjwal@Ubuntu-Linux12 MINGW64 ~/Desktop/Gitfolder/Gitfolder (master)
+$ git commit -m "made changes in the master branch."
+[master 14bce49] made changes in the master branch.
+ 1 file changed, 1 insertion(+)
+
+
